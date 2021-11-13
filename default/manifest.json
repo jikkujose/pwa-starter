@@ -2,23 +2,23 @@
   "name": "PWA",
   "description": "Progressive Web App",
   "short_name": "PWA",
-  "start_url": "/",
+  "start_url": "https://jikkujose.in/pwa-starter/default/",
   "theme_color": "#000",
   "background_color": "#fff",
   "display": "standalone",
   "icons": [
     {
-      "src": "https://jikkujose.in/api/pwa/images/icons/192x192.png",
+      "src": "https://jikkujose.in/pwa-starter/default/images/icons/192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://jikkujose.in/api/pwa/images/icons/150x150.png",
+      "src": "https://jikkujose.in/pwa-starter/default/images/icons/150x150.png",
       "sizes": "150x150",
       "type": "image/png"
     },
     {
-      "src": "https://jikkujose.in/api/pwa/images/icons/512x512.png",
+      "src": "https://jikkujose.in/pwa-starter/default/images/icons/512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
