@@ -29,31 +29,9 @@
       }
     </script>
     <script>
-      ;(function() {
-        function initializeWorker() {
-          let simpleWorker = null
-          let URL = window.URL || window.webkitURL
-          window.URL = URL
-
-          const workerBlob = new Blob([(() => 23).toString()], {
-            type: "text/javascript",
-          })
-
-          if (typeof Worker === undefined) {
-            console.log("No webworker supported")
-            return false
-          }
-
-          workerURL = window.URL.createObjectURL(workerBlob)
-          simpleWorker = new Worker(workerURL)
-
-          simpleWorker.onmessage = function(e) {
-            console.log(e)
-          }
-        }
-
-        initializeWorker()
-      })()
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      };
     </script>
 
     <title>PWA</title>
