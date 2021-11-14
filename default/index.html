@@ -29,9 +29,49 @@
       }
     </script>
     <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
-      };
+      ;(function() {
+        const serviceWorker = () => {
+          self.addEventListener("install", function(event) {
+            event.waitUntil(
+              caches.open("sw-cache").then(function(cache) {
+                return cache.add("index.html")
+              })
+            )
+          })
+
+          self.addEventListener("fetch", function(event) {
+            event.respondWith(
+              caches.match(event.request).then(function(response) {
+                return response || fetch(event.request)
+              })
+            )
+          })
+        }
+
+        function initializeWorker() {
+          let simpleWorker = null
+          let URL = window.URL || window.webkitURL
+          window.URL = URL
+
+          const workerBlob = new Blob([serviceWorker.toString()], {
+            type: "text/javascript",
+          })
+
+          if (typeof Worker === undefined) {
+            console.log("No webworker supported")
+            return false
+          }
+
+          workerURL = window.URL.createObjectURL(workerBlob)
+
+          if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register(workerURL);
+          };
+
+        }
+
+        initializeWorker()
+      })()
     </script>
 
     <title>PWA</title>
