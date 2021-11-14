@@ -21,7 +21,13 @@
       "src": "https://jikkujose.in/pwa-starter/default/images/icons/512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "https://jikkujose.in/pwa-starter/default/images/icons/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
