@@ -65,7 +65,7 @@
           workerURL = window.URL.createObjectURL(workerBlob)
 
           if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register(workerURL);
+            navigator.serviceWorker.register("./sw.js");
           };
 
         }
