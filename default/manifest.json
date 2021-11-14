@@ -2,7 +2,7 @@
   "name": "PWA",
   "description": "Progressive Web App",
   "short_name": "PWA",
-  "start_url": "https://jikkujose.in/pwa-starter/default/",
+  "start_url": "/",
   "theme_color": "#000",
   "background_color": "#fff",
   "display": "standalone",
